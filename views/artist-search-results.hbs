@@ -1,0 +1,15 @@
+
+  <h1>Search Results</h1>
+  {{#each artists}}
+    <div>
+      <h2>{{name}}</h2>
+      <img src="{{images[0].url}}" alt="{{name}} Image">
+      <a href="/albums/{{id}}">View Albums</a>
+    </div>
+  {{/each}}
+
+
+{{!-- When you write something like {{name}} or {{images[0].url}} 
+inside an {{#each}} block, Handlebars interprets it as accessing 
+properties directly from the current item in the array.  
+you can simplify it by directly referencing the properties without using this--}}
